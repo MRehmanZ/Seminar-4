@@ -1,4 +1,3 @@
-
 using IdentityPractice.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,12 +10,9 @@ namespace WebApplication1_SEMINAR_WEEK_4
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
-
             builder.Services.AddControllers();
             builder.Services.AddDbContext<SchoolContext>(options =>
                 options.UseSqlite(builder.Configuration.GetConnectionString("Connection")));
-
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -36,7 +32,6 @@ namespace WebApplication1_SEMINAR_WEEK_4
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
